@@ -1,0 +1,3 @@
+[build]
+# Always compile for the instruction set of the STM32F4
+target = "thumbv7em-none-eabihf"

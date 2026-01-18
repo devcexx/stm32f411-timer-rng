@@ -1,0 +1,11 @@
+[package]
+name = "stm32f411-timer-rng"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+rand = ["dep:rand_core"]
+
+[dependencies]
+rand_core = { version = "0.9.5", optional = true }
+stm32f4-staging = { version = "0.16", features = ["stm32f411"] }
