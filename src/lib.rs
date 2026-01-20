@@ -83,7 +83,11 @@ impl TimerRng {
         // Use TI4 as source for TIM5_CH4
         tim5.ccmr2_input().modify(|_, w| {
             unsafe {
-                w.cc4s().bits(0b01) // FUCKING OPEN AN ISSUE FOR THIS
+                // Cannot use cc4s().ti4() because in stm32f4-staging 0.16 (The
+                // version used in stm32f4xx_hal), this is broken, because it
+                // swaps ti4() with ti3(). Fixed in 0.20. Just writing the raw
+                // value directly.
+                w.cc4s().bits(0b01)
             }
         });
 
