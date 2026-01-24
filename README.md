@@ -21,7 +21,7 @@ That said, it can be perfectly useful for applications where you just need to
 provide some appearance of randomness (e.g ID generation, random delay
 generation, etc). Indeed, probably a good way for using this library is for
 generating a single u64 value that can be used as seed for a PRNG, like the one
-provided by the [rand][(](https://crates.io/crates/rand). With it, you could
+provided by the [rand](https://crates.io/crates/rand) crate. With it, you could
 just do something like:
 
 ```rust
